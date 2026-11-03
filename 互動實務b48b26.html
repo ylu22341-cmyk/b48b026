@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>盧怡君 Lu Yi-Chun | 個人風格網站</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Styling & Theme Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sand: {
+              50: '#FAF9F6',
+              100: '#F4F1EA',
+              200: '#E8E2D5',
+              300: '#DCD3C0',
+            },
+            pastel: {
+              rose: '#F7E7E6',
+              sage: '#E8EFE9',
+              peach: '#FDECEF',
+              slate: '#3A424E',
+              muted: '#718096',
+              accent: '#9E8373'
+            }
+          },
+          fontFamily: {
+            serif: ['Georgia', 'serif'],
+            sans: ['"Microsoft JhengHei"', '"微軟正黑體"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF9F6;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #DCD3C0;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9E8373;
+    }
+    
+    .font-georgia {
+      font-family: 'Georgia', serif;
+    }
+    .font-zh {
+      font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-sand-50 text-pastel-slate font-zh leading-relaxed antialiased selection:bg-pastel-peach selection:text-pastel-slate">
+
+  <!-- Header / Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 bg-sand-50/90 backdrop-blur-md z-40 border-b border-sand-200/60 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="group flex items-center gap-2 text-xl font-georgia tracking-wide text-pastel-slate">
+        <span class="font-bold">Lu Yi-Chun</span>
+        <span class="text-xs font-zh text-pastel-muted font-normal border-l border-sand-300 pl-2">盧怡君</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm tracking-widest">
+        <a href="#home" class="nav-link transition-colors duration-200 hover:text-pastel-accent py-1 relative font-medium active text-pastel-accent" data-section="home">
+          首頁
+          <span class="underline-indicator absolute bottom-0 left-0 w-full h-0.5 bg-pastel-accent transition-all duration-300"></span>
+        </a>
+        <a href="#about" class="nav-link transition-colors duration-200 text-pastel-muted hover:text-pastel-accent py-1 relative font-medium" data-section="about">
+          關於我
+          <span class="underline-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-pastel-accent transition-all duration-300"></span>
+        </a>
+        <a href="#expertise" class="nav-link transition-colors duration-200 text-pastel-muted hover:text-pastel-accent py-1 relative font-medium" data-section="expertise">
+          特長興趣
+          <span class="underline-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-pastel-accent transition-all duration-300"></span>
+        </a>
+        <a href="#journal" class="nav-link transition-colors duration-200 text-pastel-muted hover:text-pastel-accent py-1 relative font-medium" data-section="journal">
+          生活寫實
+          <span class="underline-indicator absolute bottom-0 left-0 w-0 h-0.5 bg-pastel-accent transition-all duration-300"></span>
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden p-2 text-pastel-slate hover:text-pastel-accent focus:outline-none" aria-label="Toggle Navigation">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-sand-50/95 border-b border-sand-200 px-6 py-4 space-y-3 text-center">
+      <a href="#home" class="mobile-nav-link block py-2 text-pastel-slate font-medium hover:text-pastel-accent">首頁</a>
+      <a href="#about" class="mobile-nav-link block py-2 text-pastel-slate font-medium hover:text-pastel-accent">關於我</a>
+      <a href="#expertise" class="mobile-nav-link block py-2 text-pastel-slate font-medium hover:text-pastel-accent">特長興趣</a>
+      <a href="#journal" class="mobile-nav-link block py-2 text-pastel-slate font-medium hover:text-pastel-accent">生活寫實</a>
+    </div>
+  </header>
+
+  <!-- Hero Section (首頁) -->
+  <section id="home" class="min-h-screen pt-20 flex items-center justify-center relative overflow-hidden px-6 py-12">
+    <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      
+      <!-- Typography Side -->
+      <div class="md:col-span-5 space-y-6 text-center md:text-left z-10">
+        <p class="font-georgia text-sm text-pastel-accent tracking-widest uppercase italic">
+          Life & Personal Journal
+        </p>
+        
+        <h1 class="text-4xl md:text-5xl font-light text-pastel-slate leading-tight">
+          盧怡君 <br>
+		  <h2>
+          <span class="font-georgia italic text-pastel-accent font-normal">資訊管理系  B48B026
+		  </span></br>
+        </h1>
+
+        <p class="text-pastel-muted text-sm font-light tracking-wide max-w-sm mx-auto md:mx-0">
+          我是盧怡君，嶺東科大學生。喜歡聽歌、追劇與美妝，紀錄溫柔細碎的大學生活。
+        </p>
+
+        <div class="pt-2 flex justify-center md:justify-start gap-4">
+          <a href="#about" class="px-7 py-3 rounded-full bg-pastel-slate text-sand-50 hover:bg-pastel-accent transition-all duration-300 text-xs tracking-widest uppercase font-medium shadow-sm">
+            認識我
+          </a>
+        </div>
+      </div>
+
+      <!-- Main Visual Banner Image -->
+      <div class="md:col-span-7 relative">
+       <div class="relative rounded-2xl overflow-hidden shadow-sm border border-sand-200/80 group cursor-pointer" onclick="openLightbox('images/1.jpg', 'Life Atmosphere')">
+          <img 
+            src="images/1.jpg"
+            alt="Life Style Image" 
+            class="w-full h-[60vh] object-cover transition-transform duration-700 group-hover:scale-105"
+            onerror="this.src='https://placehold.co/1200x800/E8E2D5/4A5568?text=Warm+Life+Moments'"
+          >
+          <div class="absolute inset-0 bg-pastel-slate/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <span class="text-xs text-sand-50 font-georgia tracking-widest bg-pastel-slate/60 px-3 py-1.5 rounded-full backdrop-blur-sm">
+              <i data-lucide="maximize-2" class="w-3 h-3 inline mr-1"></i> 點擊放大
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Me Section (關於我) -->
+  <section id="about" class="py-24 px-6 bg-sand-100/40 border-y border-sand-200/50">
+    <div class="max-w-5xl mx-auto space-y-12">
+      
+      <!-- Section Title -->
+      <div class="text-center space-y-1">
+        <h2 class="font-georgia text-3xl text-pastel-slate italic">About Me</h2>
+        <p class="text-xs text-pastel-accent tracking-widest uppercase font-medium">關於我</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+        <!-- Portrait Image -->
+        <div class="md:col-span-5">
+          <div class="rounded-2xl overflow-hidden shadow-sm border border-sand-200 group relative cursor-pointer" onclick="openLightbox('images/2.jpg', 'Lu Yi-Chun Portrait')">
+            <img 
+              src="images/2.jpg" 
+              alt="Lu Yi-Chun" 
+              class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"
+              onerror="this.src='https://placehold.co/800x1000/E8E2D5/4A5568?text=Lu+Yi-Chun'"
+            >
+            <div class="absolute inset-0 bg-pastel-slate/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <span class="p-3 bg-sand-50/80 rounded-full backdrop-blur-sm text-pastel-slate">
+                <i data-lucide="zoom-in" class="w-5 h-5"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bio Content & Traits -->
+        <div class="md:col-span-7 space-y-6">
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <h3 class="text-2xl font-light text-pastel-slate">盧怡君</h3>
+              <span class="font-georgia text-base text-pastel-accent italic">Lu Yi-Chun</span>
+            </div>
+            <p class="text-xs text-pastel-muted font-medium tracking-wide flex items-center gap-2">
+              <i data-lucide="graduation-cap" class="w-4 h-4 text-pastel-accent"></i> 嶺東科技大學 ｜ <i data-lucide="shopping-bag" class="w-4 h-4 text-pastel-accent"></i> 全聯福利中心兼職中
+            </p>
+          </div>
+
+          <!-- Rewrite Personal Bio Text -->
+          <div class="space-y-3 text-pastel-slate text-sm leading-relaxed border-l-2 border-pastel-accent/40 pl-4">
+            <p>
+              嗨！我是怡君。目前是一名嶺東科大的大學生，平日的斜槓生活就是在全聯福利中心兼職打工，習慣在忙碌的步調中找到自己的小確幸。
+            </p>
+            <p>
+              關於我的性格，朋友都說我有種強烈的「反差萌」！剛認識我的時候，我總是安靜省話、默默觀察，看起來像個超級內向的高冷妹；但只要一旦混熟、解鎖密碼之後，我會秒變超級活潑瘋狂的搞笑擔當，點子超多，完全沒有包袱！
+            </p>
+            <p>
+              沒事的時候最喜歡窩在房間裡試美妝、開K歌App高歌或是追劇一整天。這是我放鬆自己、補充電力最棒的方式！
+            </p>
+          </div>
+
+          <!-- Personality Cards -->
+          <div class="grid grid-cols-2 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-sand-50 border border-sand-200 flex items-center gap-3 text-xs text-pastel-slate">
+              <div class="p-2 rounded-lg bg-pastel-peach text-pastel-slate"><i data-lucide="sparkles" class="w-4 h-4"></i></div>
+              <div>
+                <p class="font-medium">熟人限定放飛</p>
+                <p class="text-[10px] text-pastel-muted">超瘋超搞笑 毫無包袱</p>
+              </div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-sand-50 border border-sand-200 flex items-center gap-3 text-xs text-pastel-slate">
+              <div class="p-2 rounded-lg bg-pastel-sage text-pastel-slate"><i data-lucide="ghost" class="w-4 h-4"></i></div>
+              <div>
+                <p class="font-medium">初見省話內向</p>
+                <p class="text-[10px] text-pastel-muted">安靜觀察 溫柔害羞</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications List (Simple badges, no heavy focus) -->
+          <div class="pt-2">
+            <p class="text-xs font-georgia text-pastel-accent tracking-widest uppercase mb-2">Qualifications & Skills</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sand-50 border border-sand-200 text-xs text-pastel-slate font-medium">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-pastel-accent"></i> 視覺傳達設計 丙級
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sand-50 border border-sand-200 text-xs text-pastel-slate font-medium">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-pastel-accent"></i> 印前製程 丙級
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Hobbies & Interests Section (特長興趣) -->
+  <section id="expertise" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto space-y-12">
+      
+      <!-- Section Title -->
+      <div class="text-center space-y-1">
+        <h2 class="font-georgia text-3xl text-pastel-slate italic">Hobbies & Passions</h2>
+        <p class="text-xs text-pastel-accent tracking-widest uppercase font-medium">興趣特長</p>
+      </div>
+
+      <!-- Interests Visual Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Hobby 1: Singing -->
+        <div class="group bg-sand-50 rounded-2xl overflow-hidden border border-sand-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+          <div class="relative h-64 overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80', '唱歌音樂 Singing & Music')">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Singing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-pastel-slate/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="p-3 bg-sand-50/90 rounded-full text-pastel-slate backdrop-blur-sm"><i data-lucide="mic" class="w-5 h-5"></i></span>
+            </div>
+          </div>
+          <div class="p-6 space-y-2">
+            <div class="flex items-center gap-2 text-pastel-accent">
+              <i data-lucide="music" class="w-4 h-4"></i>
+              <span class="font-georgia text-xs uppercase tracking-widest">Singing</span>
+            </div>
+            <h3 class="text-xl font-light text-pastel-slate">K歌與音樂放鬆</h3>
+            <p class="text-xs text-pastel-muted leading-relaxed">
+              音樂是我最重要的能量來源！心情好、心情悶時都想大歌一曲，從華語流行、K-POP 到微醺 Lo-Fi，隨時隨地用歌聲釋放情感。
+            </p>
+          </div>
+        </div>
+
+        <!-- Hobby 2: Dramas -->
+        <div class="group bg-sand-50 rounded-2xl overflow-hidden border border-sand-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+          <div class="relative h-64 overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&w=1200&q=80', '追劇影集 Movies & Dramas')">
+            <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&w=800&q=80" alt="Watching Dramas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-pastel-slate/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="p-3 bg-sand-50/90 rounded-full text-pastel-slate backdrop-blur-sm"><i data-lucide="tv" class="w-5 h-5"></i></span>
+            </div>
+          </div>
+          <div class="p-6 space-y-2">
+            <div class="flex items-center gap-2 text-pastel-accent">
+              <i data-lucide="film" class="w-4 h-4"></i>
+              <span class="font-georgia text-xs uppercase tracking-widest">Dramas & Shows</span>
+            </div>
+            <h3 class="text-xl font-light text-pastel-slate">追劇沉浸體驗</h3>
+            <p class="text-xs text-pastel-muted leading-relaxed">
+              資深宅家追劇玩家！韓劇、陸劇、美劇或是綜藝都有涉獵。最喜歡在放假夜晚配著零食沉浸在劇情裡，享受劇情帶來的高潮迭起。
+            </p>
+          </div>
+        </div>
+
+        <!-- Hobby 3: Makeup -->
+        <div class="group bg-sand-50 rounded-2xl overflow-hidden border border-sand-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+          <div class="relative h-64 overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80', '美妝彩妝 Makeup & Beauty')">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Makeup" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-pastel-slate/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="p-3 bg-sand-50/90 rounded-full text-pastel-slate backdrop-blur-sm"><i data-lucide="sparkles" class="w-5 h-5"></i></span>
+            </div>
+          </div>
+          <div class="p-6 space-y-2">
+            <div class="flex items-center gap-2 text-pastel-accent">
+              <i data-lucide="heart" class="w-4 h-4"></i>
+              <span class="font-georgia text-xs uppercase tracking-widest">Beauty & Makeup</span>
+            </div>
+            <h3 class="text-xl font-light text-pastel-slate">美妝彩妝研究</h3>
+            <p class="text-xs text-pastel-muted leading-relaxed">
+              熱愛研究各種不同風格的妝容與彩妝新品！從淡雅偽素顏到浪漫約會妝，享受每一次隨心所欲打扮、探索變美過程的樂趣。
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Life & Journal Section (生活寫實 - 相片牆) -->
+  <section id="journal" class="py-24 px-6 bg-sand-100/40 border-t border-sand-200/50">
+    <div class="max-w-6xl mx-auto space-y-12">
+      
+      <!-- Section Title -->
+      <div class="text-center space-y-1">
+        <h2 class="font-georgia text-3xl text-pastel-slate italic">Life Gallery</h2>
+        <p class="text-xs text-pastel-accent tracking-widest uppercase font-medium">生活寫實</p>
+      </div>
+
+      <!-- Photo Wall Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        
+        <!-- Photo Item 1: Beauty -->
+        <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-sm border border-sand-200" onclick="openLightbox('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=80', '美妝收藏彩妝特寫')">
+          <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="Beauty Collection" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-pastel-slate/30 opacity-0 group-hover:opacity-100 transition-opacity p-3 flex items-end justify-between text-sand-50">
+            <span class="text-xs font-georgia">Beauty Notes</span>
+            <i data-lucide="heart" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <!-- Photo Item 2: Music -->
+        <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-sm border border-sand-200" onclick="openLightbox('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80', '音樂與演唱現場')">
+          <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80" alt="Music Vibe" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-pastel-slate/30 opacity-0 group-hover:opacity-100 transition-opacity p-3 flex items-end justify-between text-sand-50">
+            <span class="text-xs font-georgia">KTV & Music</span>
+            <i data-lucide="music" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <!-- Photo Item 3: Coffee & Dramas -->
+        <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-sm border border-sand-200" onclick="openLightbox('https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?auto=format&fit=crop&w=1200&q=80', '下午茶與追劇時光')">
+          <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?auto=format&fit=crop&w=600&q=80" alt="Drama Afternoon" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-pastel-slate/30 opacity-0 group-hover:opacity-100 transition-opacity p-3 flex items-end justify-between text-sand-50">
+            <span class="text-xs font-georgia">Cozy Night</span>
+            <i data-lucide="coffee" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <!-- Photo Item 4: Daily Life -->
+        <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-sm border border-sand-200" onclick="openLightbox('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80', '朋友聚會放飛自我')">
+          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80" alt="Friends Fun" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-pastel-slate/30 opacity-0 group-hover:opacity-100 transition-opacity p-3 flex items-end justify-between text-sand-50">
+            <span class="text-xs font-georgia">Crazy Friends</span>
+            <i data-lucide="smile" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer (頁尾與聯繫) -->
+  <footer class="py-12 px-6 bg-sand-50 border-t border-sand-200">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div class="space-y-1">
+        <p class="font-georgia text-lg text-pastel-slate">Lu Yi-Chun / 盧怡君</p>
+        <p class="text-xs text-pastel-muted">Personal Life Space</p>
+      </div>
+
+      <div class="flex items-center gap-6 text-xs text-pastel-slate">
+        <a href="mailto:yichun@example.com" class="hover:text-pastel-accent transition-colors flex items-center gap-1.5">
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i> yichun@example.com
+        </a>
+        <span class="text-sand-300">|</span>
+        <div class="flex space-x-3 text-pastel-muted">
+          <a href="#" class="hover:text-pastel-slate transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="#" class="hover:text-pastel-slate transition-colors" aria-label="Youtube"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 bg-pastel-slate/80 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="relative max-w-4xl w-full bg-sand-50 rounded-2xl overflow-hidden shadow-2xl border border-sand-200" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-sand-50/80 backdrop-blur-sm text-pastel-slate flex items-center justify-center hover:bg-sand-200 transition-colors" aria-label="Close modal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="p-2">
+        <img id="lightbox-img" src="" alt="Enlarged visual" class="w-full max-h-[75vh] object-contain rounded-xl">
+      </div>
+      <div class="p-4 bg-sand-100/60 border-t border-sand-200 text-center">
+        <p id="lightbox-caption" class="text-sm font-georgia text-pastel-slate"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Active Navigation Highlight on Scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let currentSection = 'home';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        const targetSection = link.getAttribute('data-section');
+        const indicator = link.querySelector('.underline-indicator');
+        
+        if (targetSection === currentSection) {
+          link.classList.add('text-pastel-accent');
+          link.classList.remove('text-pastel-muted');
+          if (indicator) {
+            indicator.classList.remove('w-0');
+            indicator.classList.add('w-full');
+          }
+        } else {
+          link.classList.remove('text-pastel-accent');
+          link.classList.add('text-pastel-muted');
+          if (indicator) {
+            indicator.classList.remove('w-full');
+            indicator.classList.add('w-0');
+          }
+        }
+      });
+    });
+
+    // Lightbox Functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(imgUrl, captionText) {
+      lightboxImg.src = imgUrl;
+      lightboxCaption.innerText = captionText || '';
+      lightbox.classList.remove('hidden');
+      setTimeout(() => {
+        lightbox.classList.remove('opacity-0');
+      }, 10);
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add('opacity-0');
+      setTimeout(() => {
+        lightbox.classList.add('hidden');
+        lightboxImg.src = '';
+      }, 300);
+    }
+
+    // Escape key listener for Lightbox
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
